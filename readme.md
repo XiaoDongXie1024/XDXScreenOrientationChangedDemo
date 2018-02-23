@@ -3,16 +3,16 @@
 
 #### 需求：
 #### 1. 在一个始终打开Camera的View上，默认以横屏进入，横屏状态下可上下旋转自动变换方向，手动点击按钮切换竖屏，竖屏默认只有Home键向下一种方向。
-#### 2. 部分控件横竖屏下的位置差别较大(使用AutoLayout实现) 不在本文介绍,如需帮助请点击[AutoLayout 实现横竖屏位置差别较大的布局]()
+#### 2. 部分控件横竖屏下的位置差别较大(使用AutoLayout实现) 不在本文介绍,如需帮助请点击[AutoLayout 实现横竖屏位置差别较大的布局](https://www.jianshu.com/p/085ce8e59625)
 
 #### 注意：带有Camera的View在旋转时需要考虑先旋转屏幕方向再旋转Camera的Video方向，两者并不直接绑定，因此需要我们分开做旋转操作，否则会出现屏幕方向与相机的Video位置不能完全重合。
 
 #### -----------------------------------------
 
-#### GitHub地址(附代码) : [带有Camera 的View 手动及自动设置屏幕方向汇总]()
-#### 简书地址   : [带有Camera 的View 手动及自动设置屏幕方向汇总]()
-#### 博客地址   : [带有Camera 的View 手动及自动设置屏幕方向汇总]()
-#### 掘金地址   : [带有Camera 的View 手动及自动设置屏幕方向汇总]()
+#### GitHub地址(附代码) : [带有Camera 的View 手动及自动设置屏幕方向汇总](https://github.com/ChengyangLi/XDXScreenOrientationChangedDemo)
+#### 简书地址   : [带有Camera 的View 手动及自动设置屏幕方向汇总](https://www.jianshu.com/p/0f3f50086d8f)
+#### 博客地址   : [带有Camera 的View 手动及自动设置屏幕方向汇总](https://chengyangli.github.io/2018/02/23/deviceOrientation/#more)
+#### 掘金地址   : [带有Camera 的View 手动及自动设置屏幕方向汇总](https://juejin.im/post/5a8fd79bf265da4e96740990)
 
 #### -----------------------------------------
 
@@ -44,7 +44,7 @@
 
 ##### 2. 使用Autolayout 设置xib中控件的布局
 如果是要实现横竖屏上的部分控件位置差别比较大可参考一下文章，
-如需帮助请点击[AutoLayout 实现横竖屏位置差别较大的布局]()
+如需帮助请点击[AutoLayout 实现横竖屏位置差别较大的布局]https://www.jianshu.com/p/085ce8e59625)
 ##### 3. 手动设置屏幕方向
 ```
 - (void)setScreenOrientation:(UIInterfaceOrientation)orientation {
@@ -70,7 +70,7 @@
 
 #### 注意：
 - 因为当APP退出时下次进入会使用上一次保存的横屏或竖屏状态，所以将横竖屏的值保存在数据库
-- 当切换横竖屏时，首先设置屏幕方向，**请注意++屏幕方向++和++相机方向++并不直接关联**，所以每次旋转需要分别旋转，然后设置相机Video的方向，即如下代码，相机的方向并不会随着屏幕方向变换而自动切换，所以需要同步进行设置。
+- 当切换横竖屏时，首先设置屏幕方向，**请注意屏幕方向和相机方向并不直接关联**，所以每次旋转需要分别旋转，然后设置相机Video的方向，即如下代码，相机的方向并不会随着屏幕方向变换而自动切换，所以需要同步进行设置。
 
 ```
 -(void)adjustAVOutputDataOrientation:(AVCaptureVideoOrientation)aOrientation

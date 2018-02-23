@@ -103,7 +103,6 @@ float _screenHeight_Portrait;
     [_captureOutput setVideoSettings:videoSettings];
     
     self.captureSession = [[AVCaptureSession alloc] init];
-    n
     NSString *preset;
     if (!preset) preset = AVCaptureSessionPreset1920x1080;
     
