@@ -27,6 +27,8 @@ float _screenHeight_Portrait;
 @property (weak, nonatomic) IBOutlet UIButton               *switchScreenOrientationBtn;
 @property (weak, nonatomic) IBOutlet UILabel                *helloLb;
 @property (weak, nonatomic) IBOutlet UILabel                *worldLb;
+@property (weak, nonatomic) IBOutlet UILabel                *Demo1Lb;
+
 
 @property (nonatomic, strong) AVCaptureSession              *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer    *captureVideoPreviewLayer;
@@ -58,6 +60,7 @@ float _screenHeight_Portrait;
     [self.view bringSubviewToFront:self.switchScreenOrientationBtn];
     [self.view bringSubviewToFront:self.helloLb];
     [self.view bringSubviewToFront:self.worldLb];
+    [self.view bringSubviewToFront:self.Demo1Lb];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
